@@ -65,7 +65,7 @@ public class StudentGeadeeeTest {
     void testGrade56(){
         System.out.println("getGrade 56");
         int mark = 56;
-        String expResult = "D";
+        String expResult = "D";                        //this test is wrong becuse 56 it = F 
         String Result = StudentGeadeee.getGrade(mark);
         assertEquals(expResult,Result);
          System.out.println("saleh");
@@ -81,8 +81,34 @@ public class StudentGeadeeeTest {
     void testGrade0(){
         System.out.println("getGrade 0");
         int mark = 100;
-        String expResult = "A+";  //can this test give me A+ ?? //yes i need to edit my method 
+        String expResult = "A+";                      //can this test give me A+ ?? //yes i need to edit my method 
         String Result = StudentGeadeee.getGrade(mark);
     }
+    //* A (90 - 100), B (80 - 89), F ( < 80 && > 100)
+     @Test
+     void testGrade90(){
+        System.out.println("getGrade 90=A");
+        int mark = 90;
+        String expResult = "A";
+        String Result = StudentGeadeee.getGrade(mark);
+        assertEquals(expResult,Result);
   
+    }
+     @Test
+     void testGradeF110(){
+        System.out.println("getGrade F > 100 ");
+        int mark = 110;
+        String expResult = "F";
+        String Result = StudentGeadeee.getGrade(mark);
+        assertEquals(expResult,Result);
+    }
+     //anything > 100 give me Grade (F) and also < 60 
+      @Test
+     void testGradeF59(){
+        System.out.println("getGrade F < 60");
+        int mark = 59; 
+        String expResult = "F";  //its true becuse 59 < 60 so its true to give me F 
+        String Result = StudentGeadeee.getGrade(mark);
+        assertEquals(expResult,Result);
+    }
 }

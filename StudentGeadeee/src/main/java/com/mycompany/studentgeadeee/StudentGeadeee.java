@@ -32,7 +32,7 @@ public class StudentGeadeee {
         else if (mark >= 80 && mark < 90)
             return "B";
         else 
-            return "F";
-    }
-
+            return "F";  
+    } 
+   
 }
