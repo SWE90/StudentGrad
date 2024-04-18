@@ -77,5 +77,12 @@ public class StudentGeadeeeTest {
         String expResult = "A+";
         String Result = StudentGeadeee.getGrade(mark);
     }
-    
+    @Test
+    void testGrade0(){
+        System.out.println("getGrade 0");
+        int mark = 100;
+        String expResult = "A+";  //can this test give me A+ ?? //yes i need to edit my method 
+        String Result = StudentGeadeee.getGrade(mark);
+    }
+  
 }
